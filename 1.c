@@ -1,22 +1,54 @@
 #include <stdio.h>
-
 void main() {
-	int Number;
-	char Name[30];
-	char Determination[100];
+	//정수 3개 n1, n2 , n3를 입력받아서
+	// n1+ n2 + n3를 출력하고
+	// n1 + n2 + n3를  출력해보는 프로그램을 작성하세요
+	// n1 - n2 - n3를  출력해보는 프로그램을 작성하세요
+	// n1 * n2 * n3를  출력해보는 프로그램을 작성하세요
+	// n1 / n2 / n3를  출력해보는 프로그램을 작성하세요
 
-	printf("이름 : ");
-	scanf_s("%s", &Name,30);
-
-	printf("학번 : ");
-	scanf_s("%d", &Number);
-
-	printf("다짐 : ");
-	scanf_s("%s", &Determination, 100);
+	int n1, n2, n3;
+	char c;
+	printf("Input Number");
+	scanf_s("%d", &n1);
+	scanf_s("%d",&n2);
+	scanf_s("%d",&n3);
 	
-	printf("=====자기소개서=====\n");
-	printf("이름 : %s\n", &Name);
-	printf("학번 : %d\n", Number);
-	printf("다짐 : %s\n", &Determination);
+	printf("Input Operator");
+	scanf_s("%c", &c);
+	scanf_s("%c", &c);
 
+	switch (c) {
+	case '+':
+		printf("%d + %d + %d = %d\n", n1, n2, n3, (n1 + n2 + n3));
+		break;
+
+	case '-':
+		printf("%d - %d - %d = %d\n", n1, n2, n3, (n1 - n2 - n3));
+		break;
+	case '*':
+		printf("%d * %d * %d = %d\n", n1, n2, n3, (n1 * n2 * n3));
+		break;
+	case '/':
+		printf("%d / %d / %d = %d\n", n1, n2, n3, (n1 / n2 / n3));
+		break;
+	}
+
+	if (c == '+') {
+		printf("%d + %d + %d = %d\n", n1, n2, n3, (n1 + n2 + n3));
+	}
+	else if(c=='-'){
+		printf("%d - %d - %d = %d\n", n1, n2, n3, (n1 - n2 - n3));
+	}
+	else if (c == '*') {
+		printf("%d * %d * %d = %d\n", n1, n2, n3, (n1 * n2 * n3));
+	}
+	else {
+		printf("%d / %d / %d = %d\n", n1, n2, n3, (n1 / n2 / n3));
+	}
+
+	
+	
+	
+	
 }
